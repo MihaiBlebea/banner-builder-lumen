@@ -13,22 +13,25 @@ class Html5Controller extends Controller
 
         //$domain = $landing->getDomainKey();
         $domain = 'netbetcom';
-        $cta = "Play now!";
+
+        if(!$request->input('cta'))
+        {
+            $cta = "Play now!";
+        } else {
+            $cta = $request->input('cta');
+        }
+
+        $hero = $request->input('hero');
         $campName = $request->input('camp');
         $button = $request->input('button');
         $bg = $request->input('bg');
         $offer = $request->input('offer');
 
         $banner = new Banner($domain, $product, $campName, $size, $lang);
-        $banner->setElements($offer, $button, $bg, $cta);
+        $banner->setElements($offer, $button, $bg, $cta, $hero);
         $template = $banner->getPathToTemplate();
 
-        $var = [
-          //'cta' => $cta,
-          //'lang' => $lang,
-          //'button' => $button,
-          'banner' => $banner
-        ];
+        $var = ['banner' => $banner];
 
         return view($template, $var);
     }

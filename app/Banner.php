@@ -20,6 +20,7 @@ class Banner extends Model
     public $cta;
     public $ctaLink;
     public $background;
+    public $hero;
 
     public function __construct($domain, $product, $campaign, $size, $lang)
     {
@@ -41,12 +42,13 @@ class Banner extends Model
         $this->logo = "logo_1.png";
     }
 
-    public function setElements($offer, $button, $background, $cta)
+    public function setElements($offer, $button, $background, $cta, $hero)
     {
         $this->offer = $offer;
         $this->button = $button;
-        $this->background = $background;
-        $this->cta = $cta;
+        $this->background = 'bg_' . $background . '.jpg';
+        $this->hero = $hero;
+        $this->cta = str_replace('-', ' ', $cta);
     }
 
     public function getPathToTemplate()
@@ -61,6 +63,11 @@ class Banner extends Model
 
     public function getButtonsPath()
     {
-        return 'banner-lab/components/buttons';
+        return 'banner-lab/components/buttons/button_' . $this->button . '.tpl';
+    }
+
+    public function getHeroPath()
+    {
+        return  $this->hero;
     }
 }

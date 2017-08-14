@@ -8,13 +8,13 @@
 {/block}
 
 {block name=style}
-    {literal}
+
         .banner-container {
             width: 120px;
             height: 600px;
             background-color: red;
             overflow:hidden;
-            background-image: url('https://climate.nasa.gov/assets/images_of_change/ioc_intro_image.png');
+            background-image: url('{#bg_path#}/{$banner->background}');
         }
         .header {
             background-color:#000;
@@ -26,18 +26,29 @@
         .body {
             padding: 5px;
         }
+        .cta-offer {
+            text-align:center;
+            margin-bottom:10px;
+        }
+        .hero {
+            width:100%;
+            margin-top:20px;
+            margin-bottom:20px;
+        }
         .offer-text {
             color: #fff;
             font-size: 2.5em;
+            font-family: fantasy;
+            margin-top:5px;
         }
         .button {
-            
+            margin-top:40px;
         }
         .footer {
             color:#fff;
             text-align:center;
         }
-    {/literal}
+
 {/block}
 
 {block name=body}
@@ -46,6 +57,7 @@
             <img class="logo" src="{$banner->getLogoPath()}" />
         </div>
         <div class="body">
+            <img class="hero" src="{#home_path#}/{$banner->getHeroPath()}" />
             <div class="cta-offer">
                 <div class="offer-text">
                     {#text1#}
@@ -57,7 +69,7 @@
                     {#text3#}
                 </div>
                 <div class="button">
-                    {include file='banner-lab/components/buttons/button_1.tpl' cta = $banner->cta}
+                    {include file=$banner->getButtonsPath() cta = $banner->cta}
                 </div>
             </div>
         </div>
