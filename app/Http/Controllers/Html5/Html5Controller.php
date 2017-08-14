@@ -4,26 +4,30 @@ namespace App\Http\Controllers\Html5;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-//use App\Models\Landing;
+use App\Banner;
 
 class Html5Controller extends Controller
 {
     // http://localhost:2777/banner-builder-lumen/public/index.php/html5/casino/120x600/en?camp=banner
-    public function index( Request $request, $product, $size,  $lang){
+    public function index( Request $request, $product, $size, $lang) {
 
         //$domain = $landing->getDomainKey();
         $domain = 'netbetcom';
-        //$cta = $landing->getCtaUrlByProduct($request->input(), $domain,$lang,$product);
+        $cta = "Play now!";
         $campName = $request->input('camp');
+        $button = $request->input('button');
+        $bg = $request->input('bg');
+        $offer = $request->input('offer');
 
-        $cta = 'click here';
-
-        //$template = 'pages.html5.' . $domain . '.' . $product . '.' . $campName . '.' . $size . '.' . $lang . '.template';
-        $template = 'pages.html5.' . $domain . '.' . $product . '.' . $campName . '.' . $size . '.template';
+        $banner = new Banner($domain, $product, $campName, $size, $lang);
+        $banner->setElements($offer, $button, $bg, $cta);
+        $template = $banner->getPathToTemplate();
 
         $var = [
-          'cta' => $cta,
-          'lang' => $lang
+          //'cta' => $cta,
+          //'lang' => $lang,
+          //'button' => $button,
+          'banner' => $banner
         ];
 
         return view($template, $var);

@@ -7,7 +7,9 @@
 
         {block name=head}{/block}
 
-        {block name=style}{/block}
+        <style>
+            {block name=style}{/block}
+        </style>
     </head>
     <body>
         {block name=body}{/block}
