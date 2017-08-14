@@ -8,7 +8,8 @@ use App\Banner;
 
 class Html5Controller extends Controller
 {
-    // http://localhost:2777/banner-builder-lumen/public/index.php/html5/casino/120x600/en?camp=banner
+    // http://localhost:2777/banner-builder-lumen/public/index.php/html5/casino/120x600/en
+    // ?camp=banner&cta=Click-here&hero=player&button=1&bg=1&offer=1
     public function index( Request $request, $product, $size, $lang) {
 
         //$domain = $landing->getDomainKey();
@@ -36,4 +37,31 @@ class Html5Controller extends Controller
         return view($template, $var);
     }
 
+    public function admin()
+    {
+        $domain = array('netbetro', 'netbetcom', 'netbetgr');
+        $products = array('casino', 'sport');
+        $campaigns = array('banner');
+        $sizes = array('500x500', '120x600');
+        $langs = array('en', 'fr', 'de');
+
+        $buttons = array(1,2);
+        $backgrounds = array(1,2,3);
+        //$ctas = array('500x500', '120x600');
+        $heros = array('player.png', 'basket.png', 'tennis.png');
+
+        $var = [
+            'domains' => $domain,
+            'products' => $products,
+            'campaigns' => $campaigns,
+            'sizes' => $sizes,
+            'langs' => $langs,
+            'buttons' => $buttons,
+            'backgrounds' => $backgrounds,
+            'heros' => $heros,
+        ];
+
+        $template = 'pages.admin.index';
+        return view($template, $var);
+    }
 }
