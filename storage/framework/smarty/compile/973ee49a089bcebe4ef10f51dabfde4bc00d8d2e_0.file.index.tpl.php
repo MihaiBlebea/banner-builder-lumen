@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-14 21:39:49
+/* Smarty version 3.1.31, created on 2017-08-14 21:56:06
   from "C:\Laragon\www\banner-builder-lumen\resources\views\pages\admin\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_599218a51eb831_63360039',
+  'unifunc' => 'content_59921c764fe9e2_94364128',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '973ee49a089bcebe4ef10f51dabfde4bc00d8d2e' => 
     array (
       0 => 'C:\\Laragon\\www\\banner-builder-lumen\\resources\\views\\pages\\admin\\index.tpl',
-      1 => 1502746785,
+      1 => 1502747761,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_599218a51eb831_63360039 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59921c764fe9e2_94364128 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -140,7 +140,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 
                 <div class="spacer">
                     <label>Select sizes:</label><br />
-                    <select v-model="size">
+                    <select v-model="size" v-on:change="iframeUrl = null">
                         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sizes']->value, 'size');
 if ($_from !== null) {

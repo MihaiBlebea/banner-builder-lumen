@@ -79,7 +79,7 @@
 
                 <div class="spacer">
                     <label>Select sizes:</label><br />
-                    <select v-model="size">
+                    <select v-model="size" v-on:change="iframeUrl = null">
                         {foreach $sizes as $size}
                             <option value="{$size}">
                                 {$size}

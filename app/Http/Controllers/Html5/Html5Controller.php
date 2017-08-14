@@ -42,7 +42,7 @@ class Html5Controller extends Controller
         $domain = array('netbetro', 'netbetcom', 'netbetgr');
         $products = array('casino', 'sport');
         $campaigns = array('banner');
-        $sizes = array('500x500', '120x600');
+        $sizes = array('300x600', '120x600');
         $langs = array('en', 'fr', 'de');
 
         $buttons = array(1,2);

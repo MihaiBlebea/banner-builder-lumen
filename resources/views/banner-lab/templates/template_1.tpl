@@ -14,6 +14,6 @@
     <body>
         {block name=body}{/block}
 
-        <script src="{URL::to('/')}/../../resources/views/banner-lab/resources/js/animation.js"></script>
+        <script src="{URL::to('/')}/../resources/views/banner-lab/resources/js/animation.js"></script>
     </body>
 </html>
