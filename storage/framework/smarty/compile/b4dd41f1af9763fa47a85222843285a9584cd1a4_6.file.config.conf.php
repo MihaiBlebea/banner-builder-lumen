@@ -1,13 +1,13 @@
-<?php /* Smarty version 3.1.31, created on 2017-08-14 16:27:53
+<?php /* Smarty version 3.1.31, created on 2017-08-15 11:26:08
          compiled from "C:\laragon\www\banner-builder-lumen\resources\views\pages\html5\netbetcom\casino\banner\120x600\en\config.conf" */ ?>
 <?php
-/* Smarty version 3.1.31, created on 2017-08-14 16:27:53
+/* Smarty version 3.1.31, created on 2017-08-15 11:26:08
   from "C:\laragon\www\banner-builder-lumen\resources\views\pages\html5\netbetcom\casino\banner\120x600\en\config.conf" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5991cf89f35286_44692615',
+  'unifunc' => 'content_5992da503ecc10_45803605',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5991cf89f35286_44692615 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5992da503ecc10_45803605 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->configLoad->_loadConfigVars($_smarty_tpl, array (
   'sections' => 
   array (

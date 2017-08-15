@@ -1,4 +1,4 @@
-{extends file="banner-lab/templates/template_1.tpl"}
+{extends file=$banner->template}
 
 {assign "lpconf" "{$smarty.current_dir}/{$banner->lang}/config.conf"}
 {config_load file=$lpconf}
@@ -12,43 +12,17 @@
         .banner-container {
             width: 120px;
             height: 600px;
-            background-color: red;
-            overflow:hidden;
             background-image: url('{#bg_path#}/{$banner->background}');
         }
-        .header {
-            background-color:#000;
-            padding:3px;
-        }
-        .logo {
-            max-width: 100%;
-        }
         .body {
-            padding: 5px;
+            flex:10;
         }
-        .cta-offer {
-            text-align:center;
-            margin-bottom:10px;
-        }
-        .hero {
-            width:100%;
-            margin-top:20px;
-            margin-bottom:20px;
+        .hero-container {
+            max-height: 200px;
         }
         .offer-text {
-            color: #fff;
-            font-size: 2.5em;
-            font-family: fantasy;
-            margin-top:5px;
+            font-size:{$banner->textS};
         }
-        .button {
-            margin-top:40px;
-        }
-        .footer {
-            color:#fff;
-            text-align:center;
-        }
-
 {/block}
 
 {block name=body}
@@ -56,17 +30,13 @@
         <div class="header">
             <img class="logo" src="{$banner->getLogoPath()}" />
         </div>
-        <div class="body">
+        <div class="hero-container">
             <img class="hero" src="{#home_path#}/{$banner->getHeroPath()}" />
+        </div>
+        <div class="body">
             <div class="cta-offer">
                 <div class="offer-text">
-                    {#text1#}
-                </div>
-                <div class="offer-text">
-                    {#text2#}
-                </div>
-                <div class="offer-text">
-                    {#text3#}
+                    {$banner->text}
                 </div>
                 <div class="button">
                     {include file=$banner->getButtonsPath() cta = $banner->cta}

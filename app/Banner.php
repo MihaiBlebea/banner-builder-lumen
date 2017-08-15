@@ -6,21 +6,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class Banner extends Model
 {
+    public $resourcesPath = "http://localhost:2777/banner-builder-lumen/resources/views";
+
     public $domain;
     public $product;
     public $campaign;
     public $size;
     public $lang;
 
+    public $template = "banner-lab/templates/template_1/template.tpl";
+
     public $path;
 
     public $logo;
-    public $offer;
     public $button;
     public $cta;
     public $ctaLink;
     public $background;
     public $hero;
+    public $text;
+    public $textS;
+
 
     public function __construct($domain, $product, $campaign, $size, $lang)
     {
@@ -42,13 +48,15 @@ class Banner extends Model
         $this->logo = "logo_1.png";
     }
 
-    public function setElements($offer, $button, $background, $cta, $hero)
+    public function setElements($button, $background, $cta, $hero, $text, $textS)
     {
-        $this->offer = $offer;
         $this->button = $button;
-        $this->background = 'bg_' . $background . '.jpg';
+        $this->background = $background;
         $this->hero = $hero;
         $this->cta = str_replace('-', ' ', $cta);
+
+        $this->text = $text;
+        $this->textS = $textS;
     }
 
     public function getPathToTemplate()
@@ -63,7 +71,7 @@ class Banner extends Model
 
     public function getButtonsPath()
     {
-        return 'banner-lab/components/buttons/button_' . $this->button . '.tpl';
+        return 'banner-lab/components/buttons/' . $this->button;
     }
 
     public function getHeroPath()

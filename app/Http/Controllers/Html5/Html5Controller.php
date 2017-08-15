@@ -10,6 +10,8 @@ class Html5Controller extends Controller
 {
     // http://localhost:2777/banner-builder-lumen/public/index.php/html5/casino/120x600/en
     // ?camp=banner&cta=Click-here&hero=player&button=1&bg=1&offer=1
+
+    //<iframe height="600" width="300" scrolling="no" style="overflow: hidden;border:0;" src="http://localhost:2777/banner-builder-lumen/public/index.php/html5/casino/300x600/en?camp=banner&amp;bg=bg_3.jpg&amp;button=button_2.tpl&amp;cta=Click&amp;hero=player.png"></iframe>
     public function index( Request $request, $product, $size, $lang) {
 
         //$domain = $landing->getDomainKey();
@@ -26,10 +28,11 @@ class Html5Controller extends Controller
         $campName = $request->input('camp');
         $button = $request->input('button');
         $bg = $request->input('bg');
-        $offer = $request->input('offer');
+        $text = $request->input('text');
+        $textS = $request->input('textS');
 
         $banner = new Banner($domain, $product, $campName, $size, $lang);
-        $banner->setElements($offer, $button, $bg, $cta, $hero);
+        $banner->setElements($button, $bg, $cta, $hero, $text, $textS);
         $template = $banner->getPathToTemplate();
 
         $var = ['banner' => $banner];
@@ -39,16 +42,18 @@ class Html5Controller extends Controller
 
     public function admin()
     {
-        $domain = array('netbetro', 'netbetcom', 'netbetgr');
+        $dirComponents = 'C:\laragon\www\banner-builder-lumen\resources\views';
+
+        //$domain = array('netbetro', 'netbetcom', 'netbetgr');
         $products = array('casino', 'sport');
         $campaigns = array('banner');
         $sizes = array('300x600', '120x600');
-        $langs = array('en', 'fr', 'de');
+        $langs = array('en', 'fr', 'ro');
 
-        $buttons = array(1,2);
-        $backgrounds = array(1,2,3);
-        //$ctas = array('500x500', '120x600');
-        $heros = array('player.png', 'basket.png', 'tennis.png');
+        $domain = array_diff(scandir($dirComponents . '\pages\html5'), array('.', '..'));
+        $buttons = array_diff(scandir($dirComponents . '\banner-lab\components\buttons'), array('.', '..'));
+        $backgrounds = array_diff(scandir($dirComponents . '\banner-lab\components\bg'), array('.', '..'));
+        $heros = array_diff(scandir($dirComponents . '\banner-lab\components\img'), array('.', '..'));
 
         $var = [
             'domains' => $domain,

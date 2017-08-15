@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-14 16:27:44
+/* Smarty version 3.1.31, created on 2017-08-15 11:28:01
   from "C:\laragon\www\banner-builder-lumen\resources\views\banner-lab\components\buttons\button_1.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5991cf8005c669_33996070',
+  'unifunc' => 'content_5992dac193ef36_26691650',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5991cf8005c669_33996070 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5992dac193ef36_26691650 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <button style="padding:10px 20px;background-color:red;color:#fff;border:0;outine:none;display:block;margin:auto;cursor:pointer;">
     <?php echo $_smarty_tpl->tpl_vars['cta']->value;?>

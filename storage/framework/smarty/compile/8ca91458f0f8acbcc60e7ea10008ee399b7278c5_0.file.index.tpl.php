@@ -1,8 +1,36 @@
+<?php
+/* Smarty version 3.1.31, created on 2017-08-15 11:26:46
+  from "C:\laragon\www\banner-builder-lumen\resources\views\pages\admin\index.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.31',
+  'unifunc' => 'content_5992da763ec533_57326583',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8ca91458f0f8acbcc60e7ea10008ee399b7278c5' => 
+    array (
+      0 => 'C:\\laragon\\www\\banner-builder-lumen\\resources\\views\\pages\\admin\\index.tpl',
+      1 => 1502794782,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5992da763ec533_57326583 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <html>
     <head>
         <title>Admin Zone</title>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="https://unpkg.com/vue"></script>
+        <?php echo '<script'; ?>
+ src="https://unpkg.com/axios/dist/axios.min.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="https://unpkg.com/vue"><?php echo '</script'; ?>
+>
 
         <style>
             .container {
@@ -47,77 +75,154 @@
                 <div class="spacer">
                     <label>Select domain:</label><br />
                     <select v-model="domain">
-                        {foreach $domains as $domain}
-                            <option value="{$domain}">
-                                {$domain}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['domains']->value, 'domain');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['domain']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
                 <div class="spacer">
                     <label>Select product:</label><br />
                     <select v-model="product">
-                        {foreach $products as $product}
-                            <option value="{$product}">
-                                {$product}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['product']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['product']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
                 <div class="spacer">
                     <label>Select campaign:</label><br />
                     <select v-model="campaign">
-                        {foreach $campaigns as $campaign}
-                            <option value="{$campaign}">
-                                {$campaign}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['campaigns']->value, 'campaign');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['campaign']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['campaign']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['campaign']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
                 <div class="spacer">
                     <label>Select sizes:</label><br />
                     <select v-model="size" v-on:change="iframeUrl = null">
-                        {foreach $sizes as $size}
-                            <option value="{$size}">
-                                {$size}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sizes']->value, 'size');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['size']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['size']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['size']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
                 <div class="spacer">
                     <label>Select language:</label><br />
                     <select v-model="lang">
-                        {foreach $langs as $lang}
-                            <option value="{$lang}">
-                                {$lang}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['langs']->value, 'lang');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['lang']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['lang']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['lang']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
                 <div class="spacer">
                     <label>Select backgrounds:</label><br />
                     <select v-model="background">
-                        {foreach $backgrounds as $background}
-                            <option value="{$background}">
-                                {$background}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['backgrounds']->value, 'background');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['background']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['background']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['background']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
                 <div class="spacer">
                     <label>Select buttons:</label><br />
                     <select v-model="button">
-                        {foreach $buttons as $button}
-                            <option value="{$button}">
-                                {$button}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['buttons']->value, 'button');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['button']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['button']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['button']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
@@ -139,11 +244,22 @@
                 <div class="spacer">
                     <label>Select heroes:</label><br />
                     <select v-model="hero">
-                        {foreach $heros as $hero}
-                            <option value="{$hero}">
-                                {$hero}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['heros']->value, 'hero');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['hero']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['hero']->value;?>
+">
+                                <?php echo $_smarty_tpl->tpl_vars['hero']->value;?>
+
                             </option>
-                        {/foreach}
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
+
                     </select>
                 </div>
 
@@ -152,7 +268,8 @@
                 </div>
             </div>
         </div>
-        <script>
+        <?php echo '<script'; ?>
+>
             var app = new Vue({
                 el: '#app',
                 data: function() {
@@ -213,6 +330,9 @@
                     }
                 }
             });
-        </script>
+        <?php echo '</script'; ?>
+>
     </body>
 </html>
+<?php }
+}
