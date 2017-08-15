@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Html5;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Crypt;
 use App\Banner;
 
 class Html5Controller extends Controller
