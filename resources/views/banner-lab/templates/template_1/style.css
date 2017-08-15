@@ -43,9 +43,11 @@
     font-family: fantasy;
     margin-top:5px;
     text-shadow: 2px 2px 2px black;
+    margin-bottom: 20px;
 }
 .text-highlight {
     color: #EBEF74;
+    text-transform: uppercase;
 }
 .button-holder {
     position: relative;
@@ -53,7 +55,8 @@
 }
 .button {
     background-color:#FDA63A;
-    padding: 10px 30%;
+    padding: 10px 10px;
+    font-size:24px;
     color:#fff;
     box-shadow: 5px 5px 3px black;
     border:0;

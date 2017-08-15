@@ -45,24 +45,25 @@
     text-shadow: 2px 2px 2px black;
 }
 .text-highlight {
-    color: #E91E63;
+    text-transform: uppercase;
 }
 .button-holder {
     position: relative;
     z-index: 20;
 }
 .button {
-    background-color:#97AFC7;
+    background-color:#80D819;
     padding: 10px 10px;
     font-size: 24px;
     color:#fff;
     box-shadow: 5px 5px 3px black;
     border:0;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor:pointer;
 }
 .button:hover {
-    background-color:#003557;
+    background-color:#98FF6E;
+    color:#000;
 }
 .footer {
     color:#fff;

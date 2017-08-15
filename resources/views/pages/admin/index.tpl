@@ -177,7 +177,8 @@
 
                     <div class="spacer">
                         <label>Write offer text:</label><br />
-                        <input class="select" type="text" v-model="text"/>
+                        <textarea class="select" v-model="text"></textarea>
+                        <!-- <input class="select" type="text" v-model="text"/> -->
                     </div>
 
                     <div class="spacer">

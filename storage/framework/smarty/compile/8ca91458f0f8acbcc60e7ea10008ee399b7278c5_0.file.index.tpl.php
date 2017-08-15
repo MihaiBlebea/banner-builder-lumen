@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-15 14:49:50
+/* Smarty version 3.1.31, created on 2017-08-15 15:41:50
   from "C:\laragon\www\banner-builder-lumen\resources\views\pages\admin\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_59930a0e302b66_94889292',
+  'unifunc' => 'content_5993163eb12981_94252677',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ca91458f0f8acbcc60e7ea10008ee399b7278c5' => 
     array (
       0 => 'C:\\laragon\\www\\banner-builder-lumen\\resources\\views\\pages\\admin\\index.tpl',
-      1 => 1502805662,
+      1 => 1502810764,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59930a0e302b66_94889292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5993163eb12981_94252677 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -293,7 +293,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 
                     <div class="spacer">
                         <label>Write offer text:</label><br />
-                        <input class="select" type="text" v-model="text"/>
+                        <textarea class="select" v-model="text"></textarea>
+                        <!-- <input class="select" type="text" v-model="text"/> -->
                     </div>
 
                     <div class="spacer">
