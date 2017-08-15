@@ -38,8 +38,9 @@
                 <div class="offer-text">
                     {$banner->text}
                 </div>
-                <div class="button">
-                    {include file=$banner->getButtonsPath() cta = $banner->cta}
+                <div class="button-holder">
+                    {*{include file=$banner->getButtonsPath() cta = $banner->cta}*}
+                    <button class="button">{$banner->cta}</button>
                 </div>
             </div>
         </div>

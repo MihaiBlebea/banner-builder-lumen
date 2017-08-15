@@ -24,6 +24,7 @@ class Html5Controller extends Controller
             $cta = $request->input('cta');
         }
 
+        $temp = $request->input('temp');
         $hero = $request->input('hero');
         $campName = $request->input('camp');
         $button = $request->input('button');
@@ -32,7 +33,7 @@ class Html5Controller extends Controller
         $textS = $request->input('textS');
 
         $banner = new Banner($domain, $product, $campName, $size, $lang);
-        $banner->setElements($button, $bg, $cta, $hero, $text, $textS);
+        $banner->setElements($temp, $button, $bg, $cta, $hero, $text, $textS);
         $template = $banner->getPathToTemplate();
 
         $var = ['banner' => $banner];
@@ -50,6 +51,7 @@ class Html5Controller extends Controller
         $sizes = array('300x600', '120x600');
         $langs = array('en', 'fr', 'ro');
 
+        $templates = array_diff(scandir($dirComponents . '\banner-lab\templates'), array('.', '..'));
         $domain = array_diff(scandir($dirComponents . '\pages\html5'), array('.', '..'));
         $buttons = array_diff(scandir($dirComponents . '\banner-lab\components\buttons'), array('.', '..'));
         $backgrounds = array_diff(scandir($dirComponents . '\banner-lab\components\bg'), array('.', '..'));
@@ -61,9 +63,10 @@ class Html5Controller extends Controller
             'campaigns' => $campaigns,
             'sizes' => $sizes,
             'langs' => $langs,
+            'templates' => $templates,
             'buttons' => $buttons,
             'backgrounds' => $backgrounds,
-            'heros' => $heros,
+            'heros' => $heros
         ];
 
         $template = 'pages.admin.index';

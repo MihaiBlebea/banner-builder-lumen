@@ -11,7 +11,7 @@
     flex-direction:column;
 }
 .header {
-    background-color:#000;
+    background-color:#003557;
     padding:3px;
 }
 .logo {
@@ -38,7 +38,7 @@
     max-height: 300px;
 }
 .offer-text {
-    color: #fff;
+    color: #FFF500;
     font-size: 3em;
     font-family: fantasy;
     margin-top:5px;
@@ -49,15 +49,17 @@
     z-index: 20;
 }
 .button {
-    background-color:#FDA63A;
-    padding: 10px 30%;
+    background-color:#97AFC7;
+    padding: 10px 10px;
+    font-size: 24px;
     color:#fff;
     box-shadow: 5px 5px 3px black;
     border:0;
+    border-radius: 15px;
     cursor:pointer;
 }
 .button:hover {
-    background-color:#FF5A00;
+    background-color:#003557;
 }
 .footer {
     color:#fff;

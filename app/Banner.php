@@ -14,7 +14,7 @@ class Banner extends Model
     public $size;
     public $lang;
 
-    public $template = "banner-lab/templates/template_1/template.tpl";
+    public $template;
 
     public $path;
 
@@ -48,8 +48,9 @@ class Banner extends Model
         $this->logo = "logo_1.png";
     }
 
-    public function setElements($button, $background, $cta, $hero, $text, $textS)
+    public function setElements($template, $button, $background, $cta, $hero, $text, $textS)
     {
+        $this->template = "banner-lab/templates/" . $template . "/template.tpl";
         $this->button = $button;
         $this->background = $background;
         $this->hero = $hero;

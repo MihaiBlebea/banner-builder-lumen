@@ -23,7 +23,10 @@
     .offer-text {
         font-size:{$banner->textS};
     }
-    
+    .button {
+        
+    }
+
 {/block}
 
 {block name=body}
@@ -39,19 +42,9 @@
                 <div class="offer-text">
                     {$banner->text}
                 </div>
-                <!--
-                <div class="offer-text">
-                    {#text1#}
-                </div>
-                <div class="offer-text">
-                    {#text2#}
-                </div>
-                <div class="offer-text">
-                    {#text3#}
-                </div>
-                -->
-                <div class="button">
-                    {include file=$banner->getButtonsPath() cta = $banner->cta}
+                <div class="button-holder">
+                    {*{include file=$banner->getButtonsPath() cta = $banner->cta}*}
+                    <button class="button">{$banner->cta}</button>
                 </div>
             </div>
         </div>
