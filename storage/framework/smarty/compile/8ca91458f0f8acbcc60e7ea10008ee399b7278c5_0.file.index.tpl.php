@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-15 13:59:09
+/* Smarty version 3.1.31, created on 2017-08-15 14:49:50
   from "C:\laragon\www\banner-builder-lumen\resources\views\pages\admin\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5992fe2d227102_64233239',
+  'unifunc' => 'content_59930a0e302b66_94889292',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ca91458f0f8acbcc60e7ea10008ee399b7278c5' => 
     array (
       0 => 'C:\\laragon\\www\\banner-builder-lumen\\resources\\views\\pages\\admin\\index.tpl',
-      1 => 1502805547,
+      1 => 1502805662,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5992fe2d227102_64233239 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59930a0e302b66_94889292 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -71,7 +71,7 @@ function content_5992fe2d227102_64233239 (Smarty_Internal_Template $_smarty_tpl)
             .error-log {
                 background-color:#FF5E5E;
                 border: 2px solid #BF0000;
-                border-radius:15px;
+                border-radius:10px;
                 padding:10px;
                 color:#fff;
                 max-width:50%;
@@ -79,7 +79,7 @@ function content_5992fe2d227102_64233239 (Smarty_Internal_Template $_smarty_tpl)
             .display-link {
                 background-color:#52BF90;
                 border: 2px solid #317256;
-                border-radius:15px;
+                border-radius:10px;
                 padding:10px;
                 color:#fff;
                 max-width:90%;:

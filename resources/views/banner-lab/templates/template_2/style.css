@@ -44,6 +44,9 @@
     margin-top:5px;
     text-shadow: 2px 2px 2px black;
 }
+.text-highlight {
+    color: #E91E63;
+}
 .button-holder {
     position: relative;
     z-index: 20;
@@ -64,4 +67,5 @@
 .footer {
     color:#fff;
     text-align:center;
+    padding: 5px;
 }

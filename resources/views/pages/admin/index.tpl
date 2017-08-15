@@ -43,7 +43,7 @@
             .error-log {
                 background-color:#FF5E5E;
                 border: 2px solid #BF0000;
-                border-radius:15px;
+                border-radius:10px;
                 padding:10px;
                 color:#fff;
                 max-width:50%;
@@ -51,7 +51,7 @@
             .display-link {
                 background-color:#52BF90;
                 border: 2px solid #317256;
-                border-radius:15px;
+                border-radius:10px;
                 padding:10px;
                 color:#fff;
                 max-width:90%;:

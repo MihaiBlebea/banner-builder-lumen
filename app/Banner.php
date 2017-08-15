@@ -60,6 +60,17 @@ class Banner extends Model
         $this->textS = $textS;
     }
 
+    public function highlightTextElement()
+    {
+        if(strrpos($this->text,"^") > -1)
+        {
+            $texts = explode("^", $this->text);
+            return $texts;
+        } else {
+            return $this->text;
+        }
+    }
+
     public function getPathToTemplate()
     {
         return $this->path;

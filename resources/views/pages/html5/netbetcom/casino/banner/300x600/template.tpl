@@ -24,7 +24,7 @@
         font-size:{$banner->textS};
     }
     .button {
-        
+
     }
 
 {/block}
@@ -40,7 +40,16 @@
         <div class="body">
             <div class="cta-offer">
                 <div class="offer-text">
-                    {$banner->text}
+                    {*{$banner->text}*}
+                    {foreach from=$banner->highlightTextElement() key=k item=i}
+                        {if $k %2 == 1}
+                            <div class="text-highlight">
+                                {$i}
+                            </div>
+                        {else}
+                            {$i}
+                        {/if}
+                    {/foreach}
                 </div>
                 <div class="button-holder">
                     {*{include file=$banner->getButtonsPath() cta = $banner->cta}*}

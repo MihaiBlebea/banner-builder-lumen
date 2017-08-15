@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-15 13:21:36
+/* Smarty version 3.1.31, created on 2017-08-15 14:53:03
   from "C:\laragon\www\banner-builder-lumen\resources\views\pages\html5\netbetcom\casino\banner\300x600\template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5992f56075d8e0_42173707',
+  'unifunc' => 'content_59930acf6ccda4_93247443',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dc6a1282e2ca63ecc6e00f674501857315c352bf' => 
     array (
       0 => 'C:\\laragon\\www\\banner-builder-lumen\\resources\\views\\pages\\html5\\netbetcom\\casino\\banner\\300x600\\template.tpl',
-      1 => 1502797177,
+      1 => 1502808445,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5992f56075d8e0_42173707 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59930acf6ccda4_93247443 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -32,33 +32,33 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, $_smarty_tp
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14711095685992f56074a059_08064461', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_35002450459930acf6a5c92_09498899', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4889363025992f56074a055_62728947', 'style');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_152848141459930acf6a9b21_73124887', 'style');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4472026415992f560755bd9_14022091', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_59557280359930acf6b56a0_36701242', 'body');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16905193165992f56075d8e3_98921906', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_123326981959930acf6ccda2_51514497', 'footer');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, $_smarty_tpl->tpl_vars['banner']->value->template);
 }
 /* {block 'head'} */
-class Block_14711095685992f56074a059_08064461 extends Smarty_Internal_Block
+class Block_35002450459930acf6a5c92_09498899 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'head' => 
   array (
-    0 => 'Block_14711095685992f56074a059_08064461',
+    0 => 'Block_35002450459930acf6a5c92_09498899',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -70,12 +70,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'style'} */
-class Block_4889363025992f56074a055_62728947 extends Smarty_Internal_Block
+class Block_152848141459930acf6a9b21_73124887 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'style' => 
   array (
-    0 => 'Block_4889363025992f56074a055_62728947',
+    0 => 'Block_152848141459930acf6a9b21_73124887',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -100,7 +100,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ;
     }
     .button {
-        
+
     }
 
 <?php
@@ -108,12 +108,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'style'} */
 /* {block 'body'} */
-class Block_4472026415992f560755bd9_14022091 extends Smarty_Internal_Block
+class Block_59557280359930acf6b56a0_36701242 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_4472026415992f560755bd9_14022091',
+    0 => 'Block_59557280359930acf6b56a0_36701242',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -132,7 +132,26 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div class="body">
             <div class="cta-offer">
                 <div class="offer-text">
-                    <?php echo $_smarty_tpl->tpl_vars['banner']->value->text;?>
+                    
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['banner']->value->highlightTextElement(), 'i', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['i']->value) {
+?>
+                        <?php if ($_smarty_tpl->tpl_vars['k']->value%2 == 1) {?>
+                            <div class="text-highlight">
+                                <?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+
+                            </div>
+                        <?php } else { ?>
+                            <?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+
+                        <?php }?>
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+?>
 
                 </div>
                 <div class="button-holder">
@@ -152,12 +171,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'body'} */
 /* {block 'footer'} */
-class Block_16905193165992f56075d8e3_98921906 extends Smarty_Internal_Block
+class Block_123326981959930acf6ccda2_51514497 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_16905193165992f56075d8e3_98921906',
+    0 => 'Block_123326981959930acf6ccda2_51514497',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
